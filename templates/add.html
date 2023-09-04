@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block title %}Add Movie{% endblock %}
+
+{% block content %}
+<div class="content">
+    <br>
+    <h1 class="heading">Add a Movie</h1>
+   <br>
+        {{ render_form(form, novalidate=True) }}    
+    <br>
+    {% if option: %}
+        <h1 class="heading">Select Movie</h1>
+  {% for i in option: %}
+  <p>
+    <img src="https://image.tmdb.org/t/p/w500/{{ i.poster_path }}"  />
+    <a href="{{ url_for('rate_movie',id=i.id)}}">{{ i.title}}</a>
+  </p>
+  {% endfor %}
+   {% endif %}
+</div>
+{% endblock %}

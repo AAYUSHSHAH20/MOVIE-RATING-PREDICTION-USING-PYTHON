@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block title %}Add Movie{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="heading">Show Information</h1>
+    
+    <p>
+      <img src="https://image.tmdb.org/t/p/w500/{{ details.poster_path }}"  />
+      <h1>{{ details.original_name}}</h1> 
+      <p>{{ details.popularity }}</p>
+      <p>{{ details.release_date }}</p>
+      <p>{{ details.vote_average }}</p>
+      <p>{{ details.overview }}</p>
+    </p>
+</div>
+     
+{% endblock %}

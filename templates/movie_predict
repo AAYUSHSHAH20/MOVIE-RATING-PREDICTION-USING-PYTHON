@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block title %}Movie Rating{% endblock %}
+
+{% block content %}
+<div class="content">
+   <h1> value of Prediction : {{ predict }}  </h1>
+</div>
+{% endblock %}
